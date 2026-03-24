@@ -1,0 +1,5 @@
+bird(sparrow). bird(eagle). bird(penguin).
+canfly(sparrow). canfly(eagle).
+cannotfly(penguin).
+
+query(X):- (canfly(X)->write(X),write(' can fly'); write(X),write(' cannot fly')).
