@@ -1,0 +1,7 @@
+import itertools
+colors=['R','G','B']
+regions=['A','B','C']
+adj={'A':['B','C'],'B':['A','C'],'C':['A','B']}
+for assign in itertools.product(colors,repeat=3):
+    if all(assign[regions.index(r)]!=assign[regions.index(n)] for r in regions for n in adj[r]):
+        print(dict(zip(regions,assign))); break
