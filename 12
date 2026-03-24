@@ -1,0 +1,4 @@
+board=[" "]*9
+def show(): print(board[0:3],board[3:6],board[6:9])
+def move(p,pos): board[pos]=p; show()
+move("X",0); move("O",4)
