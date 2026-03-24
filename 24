@@ -1,0 +1,5 @@
+diet(diabetes,'Avoid sugar, eat fiber').
+diet(bp,'Low salt, more fruits').
+diet(fever,'Light food, fluids').
+
+suggest(Disease):- diet(Disease,Advice), write('Diet: '),write(Advice).
