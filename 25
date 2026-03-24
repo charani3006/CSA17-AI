@@ -1,0 +1,5 @@
+state(monkey,onfloor,atdoor,hasnot).
+move(state(monkey,onfloor,atdoor,hasnot),
+     state(monkey,onchair,atdoor,hasnot)).
+move(state(monkey,onchair,atdoor,hasnot),
+     state(monkey,onchair,atdoor,has)).
