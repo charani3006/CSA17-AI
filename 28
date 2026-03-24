@@ -1,0 +1,5 @@
+symptom(fever,flu).
+symptom(cough,flu).
+symptom(rash,measles).
+
+diagnose(Symptom,Disease):- symptom(Symptom,Disease).
