@@ -1,0 +1,4 @@
+fact(a).
+rule(a=>b).
+
+forward:- fact(a), assert(fact(b)), write('Derived b').
