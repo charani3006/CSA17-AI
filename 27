@@ -1,0 +1,8 @@
+edge(a,b). edge(a,c). edge(b,d). edge(c,d).
+heuristic(a,3). heuristic(b,2). heuristic(c,1). heuristic(d,0).
+
+bestfs(Node,Goal):- Node=Goal, write('Reached goal').
+bestfs(Node,Goal):- 
+    findall(N,edge(Node,N),List),
+    sort(2,@=<,[H|_],[(heuristic(H),H)]),
+    bestfs(H,Goal).
