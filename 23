@@ -1,0 +1,6 @@
+parent(john,mary).
+parent(mary,susan).
+parent(john,tom).
+
+grandparent(X,Y):- parent(X,Z), parent(Z,Y).
+sibling(X,Y):- parent(P,X), parent(P,Y), X\=Y.
